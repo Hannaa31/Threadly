@@ -20,7 +20,7 @@ connectCloudinary()
 //middlewares
 app.use(express.json())
 app.use(cors({
-    origin: true,
+    origin: ['https://threadly-omega.vercel.app/', 'https://threadly-fu4f.vercel.app/'],
     credentials: true
 }))
 app.use(cookieParser())
