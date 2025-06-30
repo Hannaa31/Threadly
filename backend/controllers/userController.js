@@ -25,7 +25,7 @@ const loginUser=async(req,res)=>{
             res.cookie("token", token, {
                 httpOnly: true,
                 secure: process.env.NODE_ENV==="production",
-                sameSite: "Strict",
+                sameSite: "None",
                 maxAge: 24 * 60 * 60 * 1000 // 1 day
             });
             res.status(200).json({success:true,message:"Logged in successfully"})
@@ -70,7 +70,7 @@ const registerUser=async(req,res)=>{
         res.cookie("token", token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "Strict",
+            sameSite: "None",
             maxAge: 24 * 60 * 60 * 1000 // 1 day
         });
         res.status(201).json({success:true,message:"Registered successfully"})
@@ -92,7 +92,7 @@ const adminLogin=async(req,res)=>{
             res.cookie("admintoken", token, {
                 httpOnly: true,
                 secure: process.env.NODE_ENV==="production",
-                sameSite: "Strict",
+                sameSite: "None",
                 maxAge: 24 * 60 * 60 * 1000 // 1 day
             });
             res.status(200).json({success:true,message:"Logged in as Admin successfully"})
@@ -113,7 +113,7 @@ const logoutUser=(req,res)=>{
         }
         res.clearCookie("token",{
         httpOnly:true,
-        sameSite:"Strict",
+        sameSite:"None",
         secure:process.env.NODE_ENV==="production"
         })
         res.status(200).json({success:true,message:"Logged out successfully"})
