@@ -8,7 +8,7 @@ It also integrates **Stripe** for secure online payments.
 
 ## 📂 Project Structure
 ```
-hannaa31-threadly/
+Threadly/
 ├── admin/     # Admin panel (React + Vite)
 ├── backend/   # Express server, MongoDB, APIs
 └── frontend/  # Customer-facing frontend (React + Vite)
