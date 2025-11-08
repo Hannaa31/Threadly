@@ -21,14 +21,9 @@ connectCloudinary()
 app.use(express.json())
 app.use(cors({
     origin: ['https://threadly-omega.vercel.app', 'https://threadly-fu4f.vercel.app'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }))
-app.options('*', cors());
-app.use(express.json());
 app.use(cookieParser())
-
 //api endpoints
 app.use('/api/user',userRouter)
 app.use('/api/product',productRouter)
