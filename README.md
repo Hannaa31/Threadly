@@ -144,3 +144,4 @@ STRIPE_SECRET_KEY=your_stripe_secret_key
 **Sakshi**  
 GitHub: [Hannaa31](https://github.com/Hannaa31)
 Website: [Threadly](https://threadly-omega.vercel.app/)
+Admin Panel: [Threadly Admin](https://threadly-fu4f.vercel.app/)
